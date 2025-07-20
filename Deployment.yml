@@ -19,6 +19,13 @@ spec:
       image: ashokit/products
       ports:
       - containerPort: 8080
+      env:
+        - name: SPRING_DATASOURCE_URL
+          value: "jdbc:mysql://database-1.c1auc484a9az.ap-south-1.rds.amazonaws.com:3306/ashokit_ecomm"
+        - name: SPRING_DATASOURCE_USERNAME
+          value: "admin"
+        - name: SPRING_DATASOURCE_PASSWORD
+          value: "GaneshLkgs9"
 ---
 apiVersion: v1
 kind: Service
